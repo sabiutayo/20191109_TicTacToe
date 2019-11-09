@@ -29,17 +29,45 @@ public class TicTacToe {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
                 board[i][j] = ' ';
-                int x = i*SIZE+j+1;
-                System.out.print(x+" ");
+                //vTODO: must determine how I want to show the values on the board
+                int x = i * SIZE + j + 1;
+                System.out.print(x + " ");
             }
             System.out.println();
 
         }
     }
 
+    public int readMove() {
+        //temp
+        return -1;
+    }
+
+    public void makeMove(Player player, int position) {
+
+    }
+
     public void playGame() {
         // init board
         initBoard();
         showBoard();
+
+        Player curentPlayer = player1;
+
+     //while not win
+        //read move
+
+        readMove();
+
+        //show board
+        //test win
+        //change player ?
+        //this if will be in th big while
+        if (curentPlayer == player1) {
+            curentPlayer = player2;
+
+        } else {
+            curentPlayer = player1;
+        }
     }
 }
